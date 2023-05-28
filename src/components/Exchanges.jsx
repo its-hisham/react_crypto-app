@@ -31,7 +31,7 @@ fetchExchanges();
 
 }, [])
 
-if (error) return <ErrorComponent/>;
+if (error) return <ErrorComponent message={"error while fetching.."}/>;
 
   return (
     <Container maxW={"container.xl"} >
