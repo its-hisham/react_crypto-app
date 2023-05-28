@@ -3,6 +3,7 @@ import axios from 'axios'
 import { server } from '../index'
 import { Container, HStack, Heading, VStack,Text,Image} from '@chakra-ui/react';
 import Loader from './Loader';
+import ErrorComponent from './ErrorComponent';
 
 const Exchanges = () => {
 
@@ -30,6 +31,7 @@ fetchExchanges();
 
 }, [])
 
+if (error) return <ErrorComponent/>;
 
   return (
     <Container maxW={"container.xl"} >
